@@ -1,1 +1,3 @@
-/home/michael/.config/polybar/getHeadSetBattery.sh
+#!/bin/bash
+
+pactl list cards | grep bluetooth.battery | sed "s/bluetooth.battery = \"//" | sed "s/\"//"
