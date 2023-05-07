@@ -1,0 +1,16 @@
+bluez-hcitool
+evhz-git
+fsearch
+google-chrome
+jdk8-adoptopenjdk
+jdk8-graalvm-bin
+logseq-desktop-bin
+openrazer-meta
+osu-lazer-bin
+pagraphcontrol-git
+polychromatic
+prismlauncher
+ttf-material-design-icons
+visual-studio-code-bin
+wmo_oc-dkms
+xcursor-entis

@@ -1,0 +1,1 @@
+/home/michael/.config/polybar/polybar-fcitx5-script.sh
