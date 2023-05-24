@@ -1,0 +1,9 @@
+[Unit]
+Description=CreateVGPU
+[Service]
+After=graphical.target
+Type=oneshot
+User=root
+ExecStart=/home/michael/Documents/gpuPassthrough/createVGPU.sh
+[Install]
+WantedBy=multi-user.target
