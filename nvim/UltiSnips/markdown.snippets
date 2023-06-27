@@ -1,0 +1,44 @@
+# i have no idea what i'm doing
+
+global !p
+def chew(text):
+    dictionary = {'1':'ㄅ', 'q':'ㄆ', 'a':'ㄇ', 'z':'ㄈ', '2':'ㄉ', 'w':'ㄊ', 's':'ㄋ', 'x':'ㄌ', 'e':'ㄍ', 'd':'ㄎ', 'c':'ㄏ', 'r':'ㄐ', 'f':'ㄑ', 'v':'ㄒ', '5':'ㄓ', 't':'ㄔ', 'g':'ㄕ', 'b':'ㄖ', 'y':'ㄗ', 'h':'ㄘ', 'n':'ㄙ', 'u':'ㄧ', 'j':'ㄨ', 'm':'ㄩ', '8':'ㄚ', 'i':'ㄛ', 'k':'ㄜ', ',':'ㄝ', '9':'ㄞ', 'o':'ㄟ', 'l':'ㄠ', '.':'ㄡ', '0':'ㄢ', 'p':'ㄣ', ';':'ㄤ', '/':'ㄥ', '-':'ㄦ', '6':'ˊ', '3':'ˇ', '4':'ˋ','7':'˙', ' ':' '}
+    payload = ''
+    for char in list(text):
+        payload += dictionary[char]
+
+    return payload
+endglobal
+
+
+snippet "sinchew ([ -~]+)" "hi" ir
+${0:`!p snip.rv = chew(match.group(1))`}
+endsnippet
+
+snippet "schew ([ -~]+)" "hi" ir
+$1 :-> ${0:`!p snip.rv = chew(match.group(1))`},
+$2
+endsnippet
+
+snippet "chew ([ -~]+)" "hi" br
+$1[${0:`!p snip.rv = chew(match.group(1))`}]$2: $3
+endsnippet
+
+snippet "wd ([ -~]+)" "hi" br
+$1[$2]$3: [${0:`!p snip.rv = chew(match.group(1))`}]
+endsnippet
+
+#    snippet test
+#    ${1:hi} ${2:`!p t[1] = 'Hello'`}
+#    endsnippet
+#    
+#    snippet wow
+#    	${1:Text}`!p snip.rv = (75-2*len(t[1]))*' '+t[1].upper()`
+#    endsnippet
+#    
+snippet "be(gin)?( (\S+))?" "begin{} / end{}" br
+begin{${1:`!p
+snip.rv = match.group(3) if match.group(2) is not None else "something"`}}
+	${2:${VISUAL}}
+end{$1}$0
+endsnippet
