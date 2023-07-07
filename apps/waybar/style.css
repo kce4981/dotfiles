@@ -1,0 +1,98 @@
+@import "./CatppuccinTheme/themes/macchiato.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Symbols Nerd Font ,Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 4px;
+}
+
+#workspaces button.active {
+    color: @maroon;
+    background-color: @surface0;
+}
+
+.modules-left,.modules-center,.modules-right {
+    margin: .8px 0;
+}
+
+.modules-left {
+    padding: 0;
+    background-color: @mantle;
+    border-radius: 1rem;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    border-radius: 16px 0 0 16px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    border-radius: 0 16px 0 16px;
+}
+
+.modules-center {
+    border-radius: 16px;
+    background-color: @mantle;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: @mauve;
+}
+
+.modules-right {
+}
+
+
+
+#network, #backlight, #battery, #pulseaudio, #clock {
+    padding: 0 1em;
+    background-color: @mantle;
+}
+
+#network {
+    border-radius: 16px 0 0 16px;
+}
+
+#clock {
+    border-radius: 0 16px 16px 0;
+}
+
+#tray {
+    margin: 0 8px 0 16px;
+    padding: 0 1em;
+    background-color: @mantle;
+    border-radius: 1em;
+}
+
+
+
+#network {
+    color: @peach;
+}
+
+#backlight {
+    color: @yellow
+}
+
+#battery {
+    
+}
+
+#pulseaudio {
+    color: @teal;
+}
+
+#clock {
+    color: @sky
+}
