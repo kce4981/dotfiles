@@ -1,0 +1,14 @@
+{
+
+    "layer": "top",
+    "spacing": 4,
+    "modules-left": ["wlr/workspaces", "custom/media"],
+    "modules-center": ["hyprland/window"],
+    // idle_inhabiter
+    "modules-right": ["network", "pulseaudio", "keyboard-state", "clock", "tray"],
+
+
+    "include": [
+		"~/.config/waybar/default.json"
+	]
+}

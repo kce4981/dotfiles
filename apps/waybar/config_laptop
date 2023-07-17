@@ -1,0 +1,34 @@
+{
+
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 4,
+    "modules-left": ["wlr/workspaces", "custom/media"],
+    "modules-center": ["hyprland/window"],
+    // idle_inhabiter
+    "modules-right": ["pulseaudio", "network", "backlight", "keyboard-state", "battery", "clock", "tray"],
+
+    "include": [
+		"~/.config/waybar/default.json"
+	],
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
