@@ -1,0 +1,42 @@
+/* Based on kitty night theme which based on vscode tokyo night theme */
+/* https://github.com/davidmathers/tokyo-night-kitty-theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+* {
+	font-family: 'Noto Sans TC', sans-serif !important;
+}
+
+#main-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#text {
+	max-width: 60vh;
+	min-width: 20em;
+
+}
+
+span {
+	font-size: 20px !important;
+	color:  #c0caf5 !important;
+}
+
+div.extra{
+	background: #28344a !important; 
+	color: #e0af68 !important;
+}
+
+div.extra .darkMode {
+	background: #28344a !important; 
+	color: #e0af68 !important;
+}
+
+.card.nightMode {
+	background: #1a1b26 !important;
+}
+
+.cloze {
+	color: #f7768e !important;
+}
