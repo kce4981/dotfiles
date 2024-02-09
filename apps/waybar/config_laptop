@@ -2,7 +2,7 @@
 
     "layer": "top",
     "spacing": 0,
-    "modules-left": ["wlr/workspaces", "custom/media"],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["hyprland/window"],
     // idle_inhabiter
     "modules-right": ["network", "backlight", "battery", "pulseaudio", "clock", "tray"],
