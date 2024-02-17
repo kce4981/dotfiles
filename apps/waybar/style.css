@@ -55,7 +55,7 @@ window#waybar {
 
 
 
-#network, #backlight, #battery, #pulseaudio, #clock {
+#network, #backlight, #battery, #pulseaudio, #clock, #keyboard-state {
     padding: 0 1em;
     background-color: @mantle;
 }
